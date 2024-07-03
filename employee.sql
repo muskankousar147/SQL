@@ -21,6 +21,57 @@ INSERT INTO employee_details (id, emp_name, emp_id, emply_dept, emp_sal, emp_mng
 INSERT INTO employee_details (id, emp_name, emp_id, emply_dept, emp_sal, emp_mng, emp_mng_name, mgr_id, emp_exp) VALUES(19, 'arjun', 219, 'mech', 280700, 'jannat', 384500, 319, 2027);
 INSERT INTO employee_details (id, emp_name, emp_id, emply_dept, emp_sal, emp_mng, emp_mng_name, mgr_id, emp_exp) VALUES(20, 'kiran', 220, 'cse', 872800, 'kiran', 398780, 320, 2020);
 
+SELECT * from employee_details WHERE id = 5;
+SELECT * from employee_details WHERE id = 8;
+SELECT * from employee_details WHERE id = 9;
+SELECT * from employee_details WHERE id = 10;
+SELECT * from employee_details WHERE id = 11;
+
+
+SELECT * from employee_details where emp_name = 'afrid' or emply_dept = 'ise';
+SELECT * from employee_details where emp_name = 'basha' or emply_dept = 'cse';
+SELECT * from employee_details where emp_name = 'arjun' or emply_dept = 'mech';
+SELECT * from employee_details where emp_name = 'tanu' or emply_dept = 'cse';
+SELECT * from employee_details where emp_name = 'tabu' or emply_dept = 'civ';
+
+SELECT * FROM employee_details where emp_sal = 29800 AND mgr_id = 315;
+SELECT * FROM employee_details where emp_sal = 2400 AND mgr_id = 302;
+SELECT * FROM employee_details where emp_sal = 2870 AND mgr_id = 304;
+SELECT * FROM employee_details where emp_sal = 98800 AND mgr_id = 305;
+SELECT * FROM employee_details where emp_sal = 8800 AND mgr_id = 307;
+
+SELECT * from employee_details where emp_id in (201, 202, 203, 204, 205);
+SELECT * from employee_details where mgr_id in (301, 302, 303, 304, 305);
+SELECT * from employee_details where emp_exp in (2024, 2025, 2026, 2027, 2028);
+SELECT * from employee_details where emp_mng_name in ('basha', 'vinay', 'shiv', 'kumar', 'johnson');
+SELECT * from employee_details where emp_dept in ('cse', 'eee', 'ece', 'mech', 'ise');
+
+SELECT emp_id  from employee_details where mgr_id not in (302, 393, 394, 388, 309);
+SELECT emp_id  from employee_details where emp_id not in (202, 293, 294, 288, 209);
+SELECT mgr_id  from employee_details where emp_sal not in (2400, 2300, 2870, 2800, 72800);
+SELECT emp_id  from employee_details where emp_exp not in (2024, 2027, 2056, 2066, 2029);
+SELECT emply_dept  from employee_details where mgr_id not in (302, 393, 394, 388, 309);
+
+
+SELECT emp_id from  employee_details where emp_id between 201 and 209
+SELECT emp_name from  employee_details where emp_name between 'a' and 'h';
+SELECT emply_dept from  employee_details where emply_dept between 'cse' and 'ise';
+SELECT mgr_id from  employee_details where mgr_id between 301 and 309;
+SELECT emp_mng from  employee_details where emp_mng between 'afrid' and 'afrin';
+
+SELECT emp_mng from  employee_details where emp_mng  not between 'afrid' and 'afrin';
+SELECT emp_sal from  employee_details where emp_sal  not between 2300 and 2870;
+SELECT emp_mng_name from  employee_details where emp_mng_name  not between 'basha' and 'jhonson';
+SELECT emp_id from  employee_details where emp_id  not between 201 and 211;
+SELECT emp_exp from  employee_details where emp_mng  not between 2025 and 2028;
+
+SELECT * FROM employee_details where emp_name like 'a%';
+SELECT * FROM employee_details where emp_mng like 's%';
+SELECT * FROM employee_details where emply_dept like 'e%';
+SELECT * FROM employee_details where emp_mng_name like 'k%';
+SELECT * FROM employee_details where emp_id like '202%';
+
+
 
 USE employee;
 SELECT * from employee_details;
