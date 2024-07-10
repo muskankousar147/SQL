@@ -72,3 +72,23 @@ SELECT * FROM product_details where prd_quantity like 'q%';
 
 USE product_detail;
 SELECT * from product;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
