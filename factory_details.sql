@@ -18,6 +18,35 @@ ALTER TABLE Airport_details ADD COLUMN Airport_budget bigint;
 ALTER TABLE Airport_details RENAME COLUMN airport_arrival TO airport_reach;
 ALTER TABLE Airport_details RENAME COLUMN airport_price TO airport_cost;
 ALTER TABLE Airport_details MODIFY COLUMN airport_name int;
+
+
+
+select count(*) as airport_name from airport_details;
+select count(*) as airport_arrival from airport_details;
+select count(*) as airport_departure from airport_details;
+select count(*) as airport_price from airport_details;
+
+select sum(airport_arrival) as arrival from airport_details;
+select sum(airport_departure) as departure from airport_details;
+select sum(airport_name) as name from airport_details;
+select sum(airport_price) as price from airport_details;
+
+select avg(airport_departure) as dept from airport_details;
+select avg(airport_arrival) as time from airport_details;
+select avg(airport_price) as price from airport_details;
+select avg(airport_id) as register from airport_details;
+
+select max(airport_price) as total_price from airport_details;
+select max(airport_arrival) as arrival from airport_details;
+select max(airport_departure) as departure from airport_details;
+select min(id) as minimum from airport_details;
+
+
+select min(airport_price) as price from airport_details;
+select min(airport_arrival) as arrival from airport_details;
+select min(airport_departure) as departure from airport_details;
+
+
 INSERT INTO Airport_details (id, Airport_arrival, airport_departure, Airport_price)
 VALUES (2, 23, 21, 23456); 
 INSERT INTO Airport_details (id, Airport_arrival, airport_departure, Airport_price)

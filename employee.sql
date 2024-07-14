@@ -75,4 +75,3 @@ SELECT * FROM employee_details where emp_id like '202%';
 
 USE employee;
 SELECT * from employee_details;
-
